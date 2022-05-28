@@ -20,3 +20,8 @@
       - gcc
      disable_gpg_check: yes
      state: latest
+  - name: Ensure mysql service is running
+    systemd:
+     name: mysqld
+     state: started
+     enabled: yes
