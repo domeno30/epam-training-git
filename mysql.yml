@@ -1,26 +1,6 @@
-all:
-  hosts:
-    db-server:
-      ansible_ssh_host: 192.168.21.131
-      ansible_ssh_host: 192.168.21.131
-      ansible_ssh_user: root
-      ansible_ssh_private_key_file: ~/.ssh/id_rsa
-
-  tasks:
-  - name: Install nginx
-    yum:
-      name: nginx
-      state: present
-
-  - name: install htop
-    yum:
-      name: htop
-      state: latest
-
-  - name: Install Mysql
-    yum:
-      name:
-        - mysql-devel
-        - mysql-server
-
-      state: latest
+- hosts: all
+    tasks:
+      - name: Install nginx
+        yum:
+          name: nginx
+          state: present
