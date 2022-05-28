@@ -1,0 +1,29 @@
+- name: Ping Servers
+  hosts: all
+  become: yes
+  
+  tasks:
+  - name: Task ping
+    ping:
+
+  - name: install htop
+    yum:
+      name: htop
+      state: latest
+
+
+  - name: install Zabbix
+    yum:
+      name: httpd
+      state: latest
+
+  - service:
+      name: httpd
+      state: restarted
+      enabled: yes
+
+
+
+
+
+
