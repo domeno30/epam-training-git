@@ -18,4 +18,5 @@
       - mysql-server
       - mysql-devel
       - gcc
+     disable_gpg_check: yes
      state: latest
