@@ -4,6 +4,8 @@
     yum:
       name: '*'
       state: latest
+  - name: Remote RPM
+    yum: name=https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
 
   - name: Install nginx
     yum:
