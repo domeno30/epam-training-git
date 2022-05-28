@@ -1,29 +1,20 @@
-- name: Ping Servers
+- name: Hots
   hosts: all
   become: yes
-  
+
   tasks:
-  - name: Task ping
-    ping:
+  - name: Install nginx
+    yum:
+      name: nginx
+      state: present
 
   - name: install htop
     yum:
       name: htop
       state: latest
 
-
-  - name: install Zabbix
+  tasks:
+  - name: Install nginx
     yum:
-      name: httpd
-      state: latest
-
-  - service:
-      name: httpd
-      state: restarted
-      enabled: yes
-
-
-
-
-
-
+      name:
+      state: present
