@@ -19,9 +19,9 @@
      enabled: yes
 
 
-- handlers:
-  - name: 'Restart nginx service'
-    service:
-      name: nginx
-      state: restarted
-      become: true
+ - handlers:
+   - name: 'Restart nginx service'
+     service:
+       name: nginx
+       state: restarted
+       become: true
