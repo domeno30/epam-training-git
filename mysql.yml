@@ -4,3 +4,10 @@
     yum:
       name: nginx
       state: present
+
+  - name: Install nginx
+    yum:
+      name:
+        - mysql-server
+        - mysql-devel
+      state: present
