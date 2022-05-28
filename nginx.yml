@@ -23,7 +23,7 @@
       name: nginx
       group: nginx
       uid: 1040
-    become: true
+    become: false
 
 - handlers:
   - name: 'Restart nginx service'
