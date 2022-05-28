@@ -12,7 +12,7 @@
       name: nginx
       state: present
 
-  - name: Ensure required packages are installed:
+  - name: Ensure required packages are Installed
     dnf:
      name:
       - mysql-server
