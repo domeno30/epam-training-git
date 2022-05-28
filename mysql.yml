@@ -1,5 +1,10 @@
 - hosts: all
   tasks:
+  - name: yum update & upgrade
+    yum:
+      name: *
+      state: latest 
+
   - name: Install nginx
     yum:
       name: nginx
