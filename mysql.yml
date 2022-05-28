@@ -12,14 +12,10 @@
       name: nginx
       state: present
 
-  - name: Install MySql-server
-    yum:
-      name:
-        - mysql-server
-      state: present
-
-  - name: Install MySql-devel
-    yum:
-      name:
-        - mysql-devel
-      state: present
+- name: Ensure required packages are installed
+  dnf:
+    name:
+      - mysql-server
+      - mysql-devel
+      - gcc
+    state: latest
