@@ -13,7 +13,6 @@
       name: htop
       state: latest
 
-  tasks:
   - name: Install Mysql
     yum:
       name:
