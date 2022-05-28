@@ -1,8 +1,8 @@
 - hosts: all
   tasks:
-  - name: yum update & upgrade
+  - name: yum install htop
     yum:
-      name: '*'
+      name: htop
       state: latest
   - name: Remote RPM
     yum: name=https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
@@ -17,7 +17,7 @@
       name:
         - mysql-server
       state: present
-      
+
   - name: Install MySql-devel
     yum:
       name:
