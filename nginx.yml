@@ -20,8 +20,8 @@
 
   - name: 'Ensure that User "web" exists'
     user:
-      name: web
-      group: web
+      name: www
+      group: www
       uid: 1040
     become: true
 
