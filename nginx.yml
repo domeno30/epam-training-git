@@ -11,3 +11,9 @@
     yum:
       name: nginx
       state: present
+
+  - name: Ensure nginx service is running
+    systemd:
+     name: nginx
+     state: started
+     enabled: yes
