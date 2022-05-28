@@ -14,7 +14,10 @@
       state: latest
 
   tasks:
-  - name: Install nginx
+  - name: Install Mysql
     yum:
       name:
-      state: present
+        - mysql-devel
+        - mysql-server
+
+      state: latest
