@@ -18,12 +18,6 @@
      state: started
      enabled: yes
 
-  - name: 'Ensure that User "web" exists'
-    user:
-      name: nginx
-      group: nginx
-      uid: 1040
-    become: false
 
 - handlers:
   - name: 'Restart nginx service'
