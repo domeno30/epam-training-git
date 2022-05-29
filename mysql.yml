@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: mysql-server
   tasks:
   - name: yum install htop
     yum:
@@ -7,7 +7,7 @@
   - name: Remote RPM
     yum: name=https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
 
-  
+
   - name: Ensure required packages are Installed
     dnf:
      name:
