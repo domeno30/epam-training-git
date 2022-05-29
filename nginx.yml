@@ -1,7 +1,7 @@
 - hosts: all
 
   tasks:
-#  - name: yum install htop1
+#  - name: yum install htop
 #    yum:
 #      name: htop
 #      state: latest
