@@ -1,5 +1,5 @@
 - hosts: all
-    ansible_ssh_private_key_file: ~/.ssh/authorized_keys
+
   tasks:
 #  - name: yum install htop
 #    yum:
