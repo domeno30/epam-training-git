@@ -2,7 +2,7 @@ hosts:
     test:
       ansible_ssh_private_key_file: ~/.ssh/authorized_keys
   tasks:
-#  - name: yum install htop
+#  - name: yum install htop1
 #    yum:
 #      name: htop
 #      state: latest
