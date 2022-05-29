@@ -1,29 +1,27 @@
-- name: Ping Servers
-  hosts: all
-  become: yes
-  
+- hosts: all
   tasks:
-  - name: Task ping
-    ping:
-
-  - name: install htop
+  - name: yum install htop
     yum:
       name: htop
       state: latest
+  - name: Remote RPM
+    yum: name=https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
 
-
-  - name: install Zabbix
+  - name: Install nginx
     yum:
-      name: httpd
-      state: latest
+      name: nginx
+      state: present
 
-  - service:
-      name: httpd
-      state: restarted
-      enabled: yes
-
-
-
-
-
-
+  - name: Ensure required packages are Installed
+    dnf:
+     name:
+      - mysql-server
+      - mysql-devel
+      - gcc
+     disable_gpg_check: yes
+     state: latest
+  - name: Ensure mysql service is running
+    systemd:
+     name: mysqld
+     state: started
+     enabled: yes
