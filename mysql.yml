@@ -28,12 +28,12 @@
   shell: mysql -u root -e 'UPDATE mysql.user SET plugin= "mysql_native_password" WHERE user= "root" AND host= "localhost"'
   shell: mysql -u root -e 'FLUSH PRIVILEGES'
     mysql_user:
-    login_host: 'localhost'
-    login_user: 'root'
-    login_password: ''
-    name: 'root'
-    password: '{{ AreIkm.)679848# }}'
-    state: present
+     login_host: 'localhost'
+     login_user: 'root'
+     login_password: ''
+     name: 'root'
+     password: '{{ AreIkm.)679848# }}'
+     state: present
 
 # create mysql db
   - mysql_db:

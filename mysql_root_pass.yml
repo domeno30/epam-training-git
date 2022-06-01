@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 - hosts: mysql-server
+=======
+- hosts: ubuntu20
+  user: ansible
+>>>>>>> a7a732231c5e5369de6dd96f683911243163273a
   become: True
   tasks:
   - mysql_user:
