@@ -1,5 +1,5 @@
-- hosts: mysql-server
-  user: root
+- hosts: ubuntu20
+  user: ansible
   become: True
   tasks:
     - name: Change the authentication plugin of MySQL root user to mysql_native_password
