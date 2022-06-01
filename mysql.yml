@@ -39,19 +39,15 @@
      priv: '*.*:ALL'
      host: localhost
      state: present
-
-
-
-
 # create mysql db
-- mysql_db:
-    community.mysql.mysql_db:
-     name: webx
-     state: present
+  - mysql_db:
+     community.mysql.mysql_db:
+      name: webx
+      state: present
 
-- mysql_user:
-    name: webx
-    password: sdfj67856sd;fljsdf98335
-    priv: '*webx*:ALL,GRANT'
-    host: localhost
-    state: present
+  - mysql_user:
+     name: webx
+     password: sdfj67856sd;fljsdf98335
+     priv: '*webx*:ALL,GRANT'
+     host: localhost
+     state: present
