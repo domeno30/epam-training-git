@@ -25,7 +25,8 @@
 
   - mysql_user:
      name: root
-     password: sdfj67856sd;fljsdf98335
+     password: '*EE0D72C1085C46C5278932678FBE2C6A782821B4'
+     encrypted: yes
      priv: '*.*:ALL'
      host: localhost
      state: present
