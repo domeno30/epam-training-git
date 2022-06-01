@@ -23,13 +23,20 @@
      state: started
      enabled: yes
 
-  - mysql_user:
-     name: root
-     password: '*EE0D72C1085C46C5278932678FBE2C6A782821B4'
-     encrypted: yes
-     priv: '*.*:ALL'
-     host: localhost
-     state: present
+  - name: Ch. the auth plugin for MySQL root user
+     shell: mysql -u root -e 'UPDATE mysql.user SET plugin= "mysql_native_password"
+     WHERE user= "root" AND host= "localhost"'
+  - name: Flush privileges
+      shell: mysql -u root -e 'FLUSH PRIVILEGES'
+  - name: Set MySQL root password
+      mysql_user :
+      login_host : 'localhost'
+      login_user : 'root'
+      login_password : ''
+      name: 'root'
+      password: '{{ AreIkm.)679848# }}'
+      state: present
+
 # create mysql db
   - mysql_db:
      community.mysql.mysql_db:
