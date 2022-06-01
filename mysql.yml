@@ -1,4 +1,5 @@
 - hosts: mysql-server
+  become: True
   tasks:
   - name: yum install htop1
     yum:
