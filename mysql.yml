@@ -23,22 +23,22 @@
      enabled: yes
 
   - mysql_user:
-    name: ''
-    host: localhost
-    state: absent
+     name: ''
+     host: localhost
+     state: absent
 
 # Removes all anonymous user accounts
-- mysql_user:
-    name: ''
-    host_all: yes
-    state: absent
+  - mysql_user:
+     name: ''
+     host_all: yes
+     state: absent
 
-- mysql_user:
-    name: root
-    password: sdfj67856sd;fljsdf98335
-    priv: '*.*:ALL'
-    host: localhost
-    state: present
+  - mysql_user:
+     name: root
+     password: sdfj67856sd;fljsdf98335
+     priv: '*.*:ALL'
+     host: localhost
+     state: present
 
 
 
@@ -48,7 +48,7 @@
     community.mysql.mysql_db:
      name: webx
      state: present
-     
+
 - mysql_user:
     name: webx
     password: sdfj67856sd;fljsdf98335
