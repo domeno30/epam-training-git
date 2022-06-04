@@ -9,7 +9,7 @@
     yum: name=https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
 
 
-  - name: Ensure required packages are Installed
+  - name: Ensure required packages are Installed1
     dnf:
      name:
       - mysql-server
